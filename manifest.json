@@ -2,5 +2,24 @@
     "name":"Chrome Island",
     "description":"설명 없음",
     "version":"1.0",
-    "manifest_version":3
+    "manifest_version":3,
+    "action":{
+        "default_popup":"hello.html",
+        "default_icon":"hello.png"
+    },
+    "icons":{
+        "16": "hello.png",
+        "32": "hello.png",
+        "48": "hello.png",
+        "128": "hello.png"
+    },
+    "background":{
+        "service_worker": "service-worker.js",
+        "type": "module"
+    },
+    "permissions": ["storage"],
+    "minimum_chrome_version": "102",
+    "omnibox": {
+        "keyword": "api"
+    }
 }
